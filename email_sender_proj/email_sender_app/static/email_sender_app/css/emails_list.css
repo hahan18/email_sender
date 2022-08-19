@@ -1,0 +1,71 @@
+.list-group {
+    width: 400px !important;
+}
+
+.list-group-item {
+    margin-top: 10px;
+    background: #7e68a9;
+    cursor: pointer;
+    transform: scaleX(1.1);
+}
+
+.list-group-item .check {
+    opacity: 1;
+}
+
+.about span {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .check {
+    opacity: 1;
+}
+
+.all_emails {
+    word-break: break-all;
+    color: white;
+    font-weight: bold;
+}
+
+#custom_btn_danger {
+    position: relative;
+    left: 10px;
+}
+
+#datetime_field {
+    font-size: 13px;
+    color: black;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: -10px;
+}
+
+#email_add_form {
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 50%;
+    border: 3px green solid;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#home_link {
+    font-size: 20px;
+    position: relative;
+    float: right;
+    top: 0;
+    right: 15px;
+}
+
+#submit_email_sender {
+    position: relative;
+    float: right;
+}

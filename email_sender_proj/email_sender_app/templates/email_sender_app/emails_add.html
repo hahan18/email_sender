@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<form method="post" id="email_add_form">
+		{% csrf_token %}
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			{{ form.email }}
+			<small id="emailHelp" class="form-text text-muted">This email will be added to the common email database</small>
+		</div>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<form action="{% url 'emails:emails_add' %}">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-primary" id="custom_btn_primary">Add new <span id="text_plus">+</span></button>
+	</form>
+	<div id="email_blocks">
+		{% for email in emails %}
+			<div id="all_emails">
+				<div class="container d-flex justify-content-center">
+					<ul class="list-group text-white">
+						<li class="list-group-item d-flex justify-content-between align-content-center">
+							<div class="d-flex flex-row">
+								<div class="ml-2">
+									<h6 class="mb-0 all_emails">{{ email }}</h6>
+									<small id="datetime_field">{{ email.created_at }}</small>
+								</div>
+							</div>
+							<div class="check">
+								<form action="{% url 'emails:emails_delete' pk=email.id %}" method="post">
+									{% csrf_token %}
+									<button
+													type="submit" class="btn btn-danger col-sm" id="custom_btn_danger" value="Delete">Delete
+									</button>
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}

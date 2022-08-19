@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<div class="container-lg">
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-xl-10 text-center">
+				<h1 class="display-2 mb-4">
+					Email sender by Alexandr Hahanovskiy
+				</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-8 col-lg-6 text-center">
+				<p class="lead text-muted">
+					There is an email sender. Load email list you want to send email below.
+				</p>
+				<a class="btn btn-primary lift" href="{% url 'emails:emails_sender' %}">Send email</a>
+				<a class="btn btn-white lift ms-3" href="{% url 'emails:emails_list' %}">
+					<span class="d-none d-sm-inline-block">Email DB</span>
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
+
+
