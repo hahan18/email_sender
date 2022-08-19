@@ -1,4 +1,4 @@
-# email_sender BY ALEXANDR HAHANOVSKIY
+# email_sender BY ALEXANDR KHAKHANOVSKYI
 There is a send mail app with GUI based on Django using Django's send_mail function.
 Absolute goal of this app is to provide mass mail sender with minimal interaction with the code.
 
